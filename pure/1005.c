@@ -1,3 +1,4 @@
+// https://www.acmicpc.net/problem/1005
 #include <stdio.h>
 #include <stdlib.h>
 
