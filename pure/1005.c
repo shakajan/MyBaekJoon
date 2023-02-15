@@ -111,8 +111,12 @@ void GetTotalTime(build D[], int N, int W) {
       }
       min = -1;
       tmp = D[i].tail;
-      while ((comp = (D + tmp->index)->total) != -1) {
-        if (comp > min) {
+      while (1) {
+        comp = (D + tmp->index)->total;
+        if (comp == -1) {
+          min = -1;
+          break;
+        } else if (comp > min) {
           min = comp;
         }
         tmp = tmp->next;
